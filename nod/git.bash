@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-export NOD_GIT=0;
-
 function nod-gitPush() {
   git add -A &&
   git commit -am "$1" &&
@@ -17,4 +15,16 @@ function nod-gitPullOverwrite() {
 function nod-gitFetchMaster() {
   git fetch --all
   git reset --hard origin/master
+}
+
+function nod-gitPullRepo() {
+  echo "Pulling git"
+  git pull
+}
+
+function nod-gitPushRepo() {
+  DATE=$(date +%d-%m-%Y" "%H:%M:%S)
+  DATE="Updated at $DATE"
+  git add -A && git commit -am "$DATE" && git push
+  echo "$DATE"
 }

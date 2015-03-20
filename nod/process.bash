@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-export NOD_PROCESS=0
-
 function nod-processShow() {
   top -o "$1" || 'cpu';
 }

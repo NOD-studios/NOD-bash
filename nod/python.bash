@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-export NOD_PYTHON=0
-
 function nod-pipUpdate() {
 	pip install --upgrade pip &&
 	pip install --upgrade setuptools &&
@@ -9,6 +7,6 @@ function nod-pipUpdate() {
 }
 
 function nod-pythonUpdate() {
-	nod-pipUpdate &&
+	nod-updatePip &&
 	brew linkapps python
 }

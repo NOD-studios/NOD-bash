@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-export NOD_PLAY=0;
-
 function nod-playTorrent() {
 	peerflix "$1" --remove --connections=500 --vlc --port=8989 --not-on-top --peer-port=9191
 }

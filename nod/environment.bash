@@ -1,5 +1,7 @@
 #!/bin/bash
 
+export NOD_ENVIRONMENT_IMPORTED=0
+
 function nod-environmentAdd() {
   brew cask install "$1"
 }

@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
-function nod-reposPopcornTime() {
+export NOD_REPOS_IMPORTED=0
+
+function nod-popcornTimeUpdate() {
 	export REPOS_POPCORN_RETURN=1;
 	if	cd /usr/local/Library/PopcornApp &&
 			git pull &&
@@ -15,7 +17,7 @@ function nod-reposPopcornTime() {
 }
 
 
-function nod-reposBashIt() {
+function nod-bashItUpdate() {
 	export REPOS_BASH_IT_RETURN=1;
 	if	cd "$BASH_IT" &&
 	 		git pull &&
@@ -26,14 +28,30 @@ function nod-reposBashIt() {
 	return $REPOS_BASH_IT_RETURN;
 }
 
-function nod-reposAll() {
+function nod-reposUpdate() {
 	export REPOS_ALL_RETURN=1;
-	if	nod-reposPopcornTime &&
-			nod-reposBashIt;
+	if	nod-popcornTimeUpdate &&
+			nod-bashItUpdate;
 	then
 		REPOS_ALL_RETURN=0;
 	fi
 	return $REPOS_ALL_RETURN;
 }
 
-export ISSET_REPOS=true;
+function nod-reposUpdateLocal() {
+	nod-import "git"
+	nod-gitPull
+	echo "Updating npm"
+	npm update && npm rebuild
+	echo "Updating bower"
+	"$(npm bin)/bower" update --allow-root
+	echo "Updating composer"
+	composer selfupdate && composer update
+	echo "Updating require.js config with bower main paths"
+	"$(npm bin)/bower-requirejs" -c js/main.js
+	echo "Compressing require.js"
+	"$(npm bin)/uglifyjs" vendor/requirejs/require.js --output="vendor/requirejs/require.min.js"
+	echo "Building with require.js"
+	"$(npm bin)/r.js" -o js/build.js
+	nod-gitPush;
+}

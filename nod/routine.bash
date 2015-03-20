@@ -26,5 +26,3 @@ function nod-routineAll() {
   nod-routineNotify 'Failed':"$LAST_UPDATE_FAIL";
   return $ROUTINE_ALL_STATUS;
 }
-
-export ISSET_ROUTINE=true;

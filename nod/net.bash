@@ -7,5 +7,3 @@ function netCon() {
 function netDnsClear() {
     sudo discoveryutil udnsflushcaches
 }
-
-export ISSET_CON=true;

@@ -16,5 +16,3 @@ function nod-torrentPlay() {
   nod-import play;
   nod-playTorrent "$@";
 }
-
-export ISSET_TORRENT=true;

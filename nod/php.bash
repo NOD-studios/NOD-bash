@@ -8,7 +8,7 @@ export PHP56_LIB="$PHP56/lib/php"
 export PATH="$PHP56/bin":$PATH
 export ISSET_PHP=0;
 
-function update-php() {
+function nod-phpUpdate() {
 	export UPDATE_PHP_STATUS=1;
 	if
 		composer selfupdate &&

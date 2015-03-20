@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-export NOD_VOLUME=0
+export NOD_VOLUME_IMPORTED=0
 
 function nod-volume() {
   osascript -e "set Volume \"$1\""

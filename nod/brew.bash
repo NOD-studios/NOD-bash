@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-function nod-updateBrew() {
+function nod-brewUpdate() {
 	export UPDATE_BREW_STATUS=1;
 	if
 		brew prune &&

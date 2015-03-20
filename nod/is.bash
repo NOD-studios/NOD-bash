@@ -1,9 +1,7 @@
 #!/usr/bin/env bash
 
-export NOD_HELPERS=0;
-
 function nod-isSet() {
-  [ -z "$$1" -a "${"$1"+defined}" == "defined" ]
+  [ -z "${1+x}" ]
 }
 
 function nod-isBinary() {
