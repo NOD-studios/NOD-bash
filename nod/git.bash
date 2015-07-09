@@ -22,6 +22,10 @@ function nod-gitPullRepo() {
   git pull
 }
 
+function nod-gitPullAllRepos() {
+  find . -maxdepth 1 -type d -exec sh -c '(cd {} && git pull)' ';'
+}
+
 function nod-gitPushRepo() {
   DATE=$(date +%d-%m-%Y" "%H:%M:%S)
   DATE="Updated at $DATE"
