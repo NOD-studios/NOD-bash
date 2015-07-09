@@ -17,6 +17,7 @@ function nod-phpUpdate() {
 	export UPDATE_PHP_STATUS=1;
 	if
 		composer selfupdate &&
+		composer global update &&
 		pear update-channels &&
 		pear upgrade-all &&
 		pecl update-channels &&
