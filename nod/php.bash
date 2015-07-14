@@ -11,8 +11,6 @@ export PATH="$PHP56/bin":$PATH
 export PATH="$HOME/.composer/vendor/bin:$PATH"
 export ISSET_PHP=0
 
-echo "$PATH"
-
 function nod-phpUpdate() {
 	export UPDATE_PHP_STATUS=1;
 	if
