@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+export PATH="/usr/local/share/python:$PATH"
+export PYTHONPATH="python -c 'import sys;print \":\".join(sys.path)'"
+
 function nod-pipUpdate() {
 	pip install --upgrade pip &&
 	pip install --upgrade setuptools &&

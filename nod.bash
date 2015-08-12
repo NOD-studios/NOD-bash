@@ -11,7 +11,6 @@ export NOD_VENDOR_DIR="$NOD_DIR"/vendor
 nod-defaultsSet() {
   export LC_ALL=en_US.UTF-8
   export LANG=en_US.UTF-8
-  export PATH="/usr/local/share/npm/bin:$PATH"
   export PATH="/usr/local/sbin":$PATH
   export PATH=$HOME/.cabal/bin:$PATH
   export PATH="$HOME/Library/Haskell/bin:$PATH"
@@ -35,7 +34,6 @@ nod-import() {
   if nod-isImported "$fileName";
     then
       true
-      #echo 'NOD-'"$fileName"' is already imported'
     else
       nod-importedConstant "$fileName"
       export "$importedConstantName"=0
