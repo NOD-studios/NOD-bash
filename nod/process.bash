@@ -39,3 +39,7 @@ function nod-processKillUi() {
   killall -KILL Dock;
   killall -KILL SystemUIServer;
 }
+
+function nod-processPorts() {
+  sudo lsof -i -P
+}

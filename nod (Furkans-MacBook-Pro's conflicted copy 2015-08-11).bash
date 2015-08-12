@@ -11,12 +11,10 @@ export NOD_VENDOR_DIR="$NOD_DIR"/vendor
 nod-defaultsSet() {
   export LC_ALL=en_US.UTF-8
   export LANG=en_US.UTF-8
-  export PATH="/usr/local/share/npm/bin:$PATH"
   export PATH="/usr/local/sbin":$PATH
   export PATH=$HOME/.cabal/bin:$PATH
   export PATH="$HOME/Library/Haskell/bin:$PATH"
   export REPOS="/usr/local/Repos"
-  export PYTHONPATH="python -c 'import sys;print \":\".join(sys.path)'"
   export ANDROID_HOME=/usr/local/opt/android-sdk
 }
 
