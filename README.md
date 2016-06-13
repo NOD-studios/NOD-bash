@@ -23,7 +23,7 @@ nod-import 'update'
 ```
 
 ###TODOs
-- Make it installable from a package manager
+- Convert it to a self installable npm package
 - Documentation
 - Use pgrep instead grep *@ [process.bash](/nod/process.bash "process.bash")*
 
