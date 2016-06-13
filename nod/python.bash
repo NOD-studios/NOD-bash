@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-export PATH="/usr/local/share/python:$PATH"
-export PYTHONPATH="python -c 'import sys;print \":\".join(sys.path)'"
-
 function nod-pipUpdate() {
 	pip install --upgrade pip &&
 	pip install --upgrade setuptools &&
@@ -10,6 +7,9 @@ function nod-pipUpdate() {
 }
 
 function nod-pythonUpdate() {
-	nod-updatePip &&
+	nod-pipUpdate &&
 	brew linkapps python
 }
+
+alias nod-updatePip=nod-pipUpdate
+alias nod-updatePython=nod-pythonUpdate

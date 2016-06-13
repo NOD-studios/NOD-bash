@@ -25,3 +25,5 @@ function nod-phpUpdate() {
   fi
 	return $UPDATE_PHP_STATUS;
 }
+
+alias nod-updatePhp=nod-phpUpdate

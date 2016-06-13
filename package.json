@@ -1,0 +1,9 @@
+{
+  "name": "nod",
+  "version": "0.0.1",
+  "description": "Helpful common bash utilities used in NOD studios development workflow",
+  "global": "1",
+  "install": "install -b .nod_bash.sh ${PREFIX:-/usr/local}/bin/.nod_bash",
+  "scripts": [ ".nod_bash.sh" ]
+}
+

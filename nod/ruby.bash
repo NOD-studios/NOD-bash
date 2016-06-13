@@ -9,3 +9,5 @@ function nod-rubyUpdate() {
 	brew upgrade ruby
 	nod-rubyUpdateGem
 }
+
+alias nod-updateRuby=nod-rubyUpdate

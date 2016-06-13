@@ -21,11 +21,3 @@ function nod-updateAll() {
 
 	echo 'Update finished'
 }
-
-alias nod-updateOsx=nod-osxUpdate
-alias nod-updateBrew=nod-brewUpdate
-alias nod-updateNode=nod-nodeUpdate
-alias nod-updateRuby=nod-rubyUpdate
-alias nod-updatePython=nod-pythonUpdate
-alias nod-updatePhp=nod-phpUpdate
-alias nod-updateRepos=nod-reposUpdate

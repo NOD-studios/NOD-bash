@@ -5,3 +5,5 @@ function nod-osxUpdate() {
 	softwareupdate --list &&
 	softwareupdate --install --all
 }
+
+alias nod-updateOsx=nod-osxUpdate

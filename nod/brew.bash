@@ -13,3 +13,5 @@ function nod-brewUpdate() {
 	fi
 	return $UPDATE_BREW_STATUS;
 }
+
+alias nod-updateBrew=nod-brewUpdate
