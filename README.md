@@ -4,6 +4,8 @@ A bash helper library that includes some functions used by [NOD studios](http://
 
 # Usage
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/NOD-studios/NOD-bash.svg)](https://greenkeeper.io/)
+
 ## Installation
 
 Clone it...
